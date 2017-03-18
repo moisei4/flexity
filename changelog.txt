@@ -1,0 +1,9 @@
+ 
+-----------------------------------------------------------------------------------------
+Version 1.0.0
+-----------------------------------------------------------------------------------------
+
+ - +1 Demo Site.
+ - Compare, quick view and wishlist buttons to gallery view mode.
+ - Google Fonts.
+ - Sticky Header functionality.

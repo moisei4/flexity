@@ -1,0 +1,143 @@
+/**
+ * Less Constants and Mixins
+ *
+ * @package WordPress
+ * @subpackage Flexity
+ * @version 1.0.0
+ */
+ 
+/* Theme Constants */
+@cont_width: 1170px;
+
+@default_header_color: #17161a;
+@default_nav_title: rgba(23, 22, 26, .6);
+@default_nav_title_active: #17161a;
+
+@color: #4e4e4e;
+
+
+/* Theme Mixins */
+.bd (@w:1px; @t:solid) {
+	border-width:@w;
+	border-style:@t;
+}
+
+.bdt (@w:1px; @t:solid) {
+	border-top-width:@w;
+	border-top-style:@t;
+}
+
+.bdb (@w:1px; @t:solid) {
+	border-bottom-width:@w;
+	border-bottom-style:@t;
+}
+
+.bdr (@w:1px; @t:solid) {
+	border-right-width:@w;
+	border-right-style:@t;
+}
+
+.bdl (@w:1px; @t:solid) {
+	border-left-width:@w;
+	border-left-style:@t;
+}
+.display_flex () {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:flex;
+}
+
+.display_inline_flex () {
+	display:-webkit-inline-flex;
+	display:-moz-inline-flex;
+	display:-ms-inline-flex;
+	display:inline-flex;
+}
+
+.flex_direction (@d:row) {
+	-webkit-flex-direction:@d;
+	-moz-flex-direction:@d;
+	-ms-flex-direction:@d;
+	flex-direction:@d;
+}
+
+.flex_wrap (@d:nowrap) {
+	-webkit-flex-wrap:@d;
+	-moz-flex-wrap:@d;
+	-ms-flex-wrap:@d;
+	flex-wrap:@d;
+}
+
+.justify_content (@d:flex-start) {
+	-webkit-justify-content:@d;
+	-moz-justify-content:@d;
+	-ms-justify-content:@d;
+	justify-content:@d;
+}
+
+.align_items (@d:stretch) {
+	-webkit-align-items:@d;
+	-moz-align-items:@d;
+	-ms-align-items:@d;
+	align-items:@d;
+}
+
+.align_content (@d:stretch) {
+	-webkit-align-content:@d;
+	-moz-align-content:@d;
+	-ms-align-content:@d;
+	align-content:@d;
+}
+
+.cl_after () {
+	content:'.';
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+.valign_after () {
+	content:'';
+	display:inline-block;
+	vertical-align:middle;
+	height:100%;
+}
+
+.pos_abs (@w:1em; @h:1em; @l:0; @r:0; @t:0; @b:0) {
+	width:@w;
+	height:@h;
+	margin:auto !important;
+	position:absolute;
+	left:@l;
+	right:@r;
+	top:@t;
+	bottom:@b;
+}
+
+.bdbx () {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.ctbx () {
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
+.bdrs (@radius:@bdrs_width) {
+	-webkit-border-radius:@radius;
+	border-radius:@radius;
+}
+
+.trans(@trans:0) when not (@trans = 0) {
+    -webkit-transition:@trans;
+    -moz-transition:@trans;
+    -ms-transition:@trans;
+    -o-transition:@trans;
+    transition:@trans;
+}
