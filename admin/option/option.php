@@ -583,7 +583,7 @@ return array(
 							'label'   => __('Main title Font Size (px)', 'flexity'),
 							'min'     => '5',
 							'max'     => '80',
-							'default' => '50',
+							'default' => '35',
 						),
 					),
 				),

@@ -23,7 +23,8 @@ global $flexity_options; ?>
 
 	<div id="primary" class="content-area<?php echo ' width-'.esc_attr($page_width); ?>">
 		<main id="main" class="site-main">
-
+		
+			<div class="page_title_wrap">
 			<?php if (!is_front_page() && $ttl_bcrumbs !== 'hide_both' && $ttl_bcrumbs !== 'only_ttl') : ?>
 				<!-- Breadcrumbs -->
 				<div class="b-crumbs-wrap">
@@ -40,6 +41,7 @@ global $flexity_options; ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 			</div>
 			<?php endif; ?>
+			</div>
 			
 			<?php if (class_exists( 'WooCommerce' ) && is_cart()) : ?>
 

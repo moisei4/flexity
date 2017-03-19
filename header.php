@@ -89,14 +89,18 @@ body_class($sticky_header);
 	
 	<!-- Logotype -->
 	<?php if ($flexity_options['flexity_header_logo']) : ?>
-	<div class="header-logo">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_attr($flexity_options['flexity_header_logo']); ?>" alt="<?php bloginfo('sitename'); ?>"></a>
+	<div class="header_logo">
+		<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_attr($flexity_options['flexity_header_logo']); ?>" alt="<?php bloginfo('sitename'); ?>"></a>
 	</div>
 	<?php endif; ?>
 	
 	<div class="header_middle">
 		<div class="header-info">
 
+			<!-- Search Form -->
+			<a href="#" class="header_search_btn" id="header-searchbtn"></a>
+			<?php get_search_form(); ?>
+			
 			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
 
 			<!-- Personal Menu -->
@@ -159,10 +163,6 @@ body_class($sticky_header);
 			<?php if (!empty($flexity_options['wishlist']['id'])) : ?>
 			<a href="<?php echo (!empty($flexity_options['wishlist']['id'])) ? get_permalink($flexity_options['wishlist']['id']) : ''; ?>" class="header-favorites"><?php if (!empty($flexity_options['wishlist']['count'])) : ?><span><?php echo esc_attr($flexity_options['wishlist']['count']); ?></span><?php endif; ?></a>
 			<?php endif; ?>
-
-			<!-- Search Form -->
-			<a href="#" class="header-searchbtn" id="header-searchbtn"></a>
-			<?php get_search_form(); ?>
 
 		</div>
 
