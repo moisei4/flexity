@@ -545,9 +545,7 @@ return array(
 									),
 								),
 							),
-							'default' => array(
-								'{{first}}',
-							),
+							'default' => 'normal',
 						),
 						array(
 							'type' => 'radiobutton',
@@ -562,6 +560,7 @@ return array(
 									),
 								),
 							),
+							'default' => '700',
 						),
 						array(
 							'type' => 'multiselect',
