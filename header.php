@@ -98,8 +98,13 @@ body_class($sticky_header);
 		<div class="header-info">
 
 			<!-- Search Form -->
-			<a href="#" class="header_search_btn" id="header-searchbtn"></a>
-			<?php get_search_form(); ?>
+			<div class="header_search_btn_wrap">
+				<a href="#" class="header_search_btn stockware_theme_icon_header_search" id="header-searchbtn"></a>
+			</div>
+			<div class="header_search">
+				<a href="#" class="header_search_close"></a>
+				<?php get_search_form(); ?>
+			</div>
 			
 			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
 
@@ -145,15 +150,17 @@ body_class($sticky_header);
 			</div>
 
 			<!-- Small Cart -->
-			<a href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" class="header-cart">
-				<div class="header-cart-inner">
-					<span class="header-cart-count">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/cart.png" alt="">
-						<span><?php echo WC()->cart->get_cart_contents_count()?></span>
-					</span>
-					<span class="header-cart-summ"><?php echo WC()->cart->get_cart_total(); ?></span>
-				</div>
-			</a>
+			<div class="header_cart_wrap">
+				<a href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" class="header-cart">
+					<div class="header-cart-inner">
+						<span class="header-cart-count">
+							<i class="stockware_theme_icon_header_cart"></i>
+							<span><?php echo WC()->cart->get_cart_contents_count()?></span>
+						</span>
+						<span class="header-cart-summ"><?php echo WC()->cart->get_cart_total(); ?></span>
+					</div>
+				</a>
+			</div>
 			
 			<?php endif; ?>
 

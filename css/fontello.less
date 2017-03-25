@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?31205247');
+  src: url('../fonts/fontello.eot?31205247#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?31205247') format('woff2'),
+       url('../fonts/fontello.woff?31205247') format('woff'),
+       url('../fonts/fontello.ttf?31205247') format('truetype'),
+       url('../fonts/fontello.svg?31205247#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?31205247#fontello') format('svg');
+  }
+}
+*/
+ 
+[class^="stockware-icon-"]:before, 
+[class*=" stockware-icon-"]:before,
+[class^="stockware_theme_icon_"]:before, 
+[class*=" stockware_theme_icon_"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.stockware-icon-ion-checkmark-round:before { content: '\f121'; } /* '' */
+.stockware-icon-ion-checkmark:before { content: '\f122'; } /* '' */
+.stockware-icon-ion-chevron-down:before { content: '\f123'; } /* '' */
+.stockware-icon-ion-chevron-left:before { content: '\f124'; } /* '' */
+.stockware-icon-ion-chevron-right:before { content: '\f125'; } /* '' */
+.stockware-icon-ion-chevron-up:before { content: '\f126'; } /* '' */
+.stockware-icon-ion-close-round:before { content: '\f129'; } /* '' */
+.stockware-icon-ion-search:before { content: '\f21f'; } /* '' */
+.stockware-icon-ion-social-twitter:before { content: '\f243'; } /* '' */
+.stockware-icon-ion-android-add:before { content: '\f2c7'; } /* '' */
+.stockware-icon-ion-android-arrow-back:before { content: '\f2ca'; } /* '' */
+.stockware-icon-ion-android-close:before { content: '\f2d7'; } /* '' */
+.stockware-icon-ion-android-remove:before { content: '\f2f4'; } /* '' */
+.stockware-icon-ion-android-arrow-forward:before { content: '\f30f'; } /* '' */
+.stockware-icon-ion-android-arrow-down:before { content: '\f35d'; } /* '' */
+.stockware-icon-ion-android-arrow-up:before { content: '\f366'; } /* '' */
+.stockware-icon-ion-android-cart:before { content: '\f370'; } /* '' */
+.stockware-icon-ion-android-done:before { content: '\f383'; } /* '' */
+.stockware-icon-ion-ios-checkmark-empty:before { content: '\f3fd'; } /* '' */
+.stockware-icon-ion-ios-close-empty:before { content: '\f404'; } /* '' */
+.stockware-icon-ion-ios-plus-empty:before { content: '\f489'; } /* '' */
+.stockware-icon-ion-ios-search-strong:before { content: '\f4a4'; } /* '' */
+.stockware-icon-ion-ios-search:before { content: '\f4a5'; } /* '' */

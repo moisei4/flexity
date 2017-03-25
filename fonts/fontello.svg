@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="ion-checkmark-round" unicode="&#xf121;" d="M781 709c34-25 43-76 18-111l-404-590c-26-35-73-43-106-17s-267 287-267 287c-30 31-30 82 1 113s79 29 108-4l193-209 352 514c25 35 72 43 105 17z" horiz-adv-x="812.5" />
+
+<glyph glyph-name="ion-checkmark" unicode="&#xf122;" d="M809 635c2-4 4-8 4-12s-2-7-4-11l-487-625c-4-4-9-12-17-12s-16 6-20 10-275 265-275 265l-6 6c-2 4-4 8-4 12s2 6 4 10l4 4c27 29 82 86 86 90s8 11 15 11 16-8 20-11 156-153 156-153l391 502c4 4 8 4 12 4s9-2 13-4z" horiz-adv-x="812.5" />
+
+<glyph glyph-name="ion-chevron-down" unicode="&#xf123;" d="M438 268v0 0l339 326c8 8 24 8 32 0l60-58c8-8 8-24 0-32l-416-398c-4-4-10-6-15-6s-12 2-16 6l-416 398c-8 8-8 24 0 32l60 58c8 8 24 8 32 0z" horiz-adv-x="875" />
+
+<glyph glyph-name="ion-chevron-left" unicode="&#xf124;" d="M168 350l326-340c8-8 8-23 0-31l-58-61c-8-8-24-8-32 0l-398 416c-4 4-6 10-6 16s2 12 6 16l398 416c8 8 24 6 32-2l58-59c8-8 8-23 0-31l-326-340v0 0z" horiz-adv-x="500" />
+
+<glyph glyph-name="ion-chevron-right" unicode="&#xf125;" d="M332 350v0 0l-326 340c-8 8-8 23 0 31l59 59c7 8 23 10 31 2l398-416c4-4 6-10 6-16s-2-12-6-16l-398-416c-8-8-24-8-31 0l-59 61c-8 8-8 23 0 31z" horiz-adv-x="500" />
+
+<glyph glyph-name="ion-chevron-up" unicode="&#xf126;" d="M438 432l-340-326c-8-8-24-8-32 0l-60 59c-8 7-8 23 0 31l416 398c4 4 10 6 16 6s11-2 15-6l416-398c8-8 8-24 0-31l-60-59c-8-8-24-8-32 0l-339 326v0 0z" horiz-adv-x="875" />
+
+<glyph glyph-name="ion-close-round" unicode="&#xf129;" d="M731 94c27-27 27-72 0-100s-73-27-100 0l-256 256-256-256c-27-27-70-27-97 0s-28 73 0 100l253 256-253 256c-28 27-28 72 0 100s70 27 97 0l256-256 256 256c27 27 72 27 100 0s27-73 0-100l-256-256z" horiz-adv-x="750" />
+
+<glyph glyph-name="ion-search" unicode="&#xf21f;" d="M744 94c8-8 8-19 0-27l-84-86c-4-4-10-6-15-6s-10 2-14 6l-164 168c-49-29-102-45-156-45-170 0-311 139-311 311s141 310 311 310 308-139 308-310c0-53-13-106-41-153z m-433 510c-104 0-190-84-190-189s86-190 190-190 187 84 187 190-84 189-187 189z" horiz-adv-x="750" />
+
+<glyph glyph-name="ion-social-twitter" unicode="&#xf243;" d="M922 635c-25-39-57-70-94-97v-24c0-250-191-539-539-539-107 0-205 31-289 86 16-2 29-4 45-4 88 0 170 31 234 82-82 2-152 57-175 131 11-2 23-4 35-4 17 0 35 4 51 8-86 17-153 94-153 185v2c26-13 55-23 86-23-51 33-84 92-84 158 0 35 10 67 26 94 93-115 232-190 388-197-4 13-4 27-4 43 0 105 84 189 190 189 54 0 101-23 136-60 43 7 84 25 122 46-14-45-45-82-84-105 39 4 76 14 109 29z" horiz-adv-x="921.9" />
+
+<glyph glyph-name="ion-android-add" unicode="&#xf2c7;" d="M625 309h-271v-271h-82v271h-272v82h272v272h82v-272h271v-82z" horiz-adv-x="625" />
+
+<glyph glyph-name="ion-android-arrow-back" unicode="&#xf2ca;" d="M668 391v-82h-508l233-234-59-59-334 334 334 334 61-59-235-234h508z" horiz-adv-x="668" />
+
+<glyph glyph-name="ion-android-close" unicode="&#xf2d7;" d="M582 582l-232-232 232-232-59-59-232 232-232-232-59 59 232 232-232 232 59 59 232-232 232 232z" horiz-adv-x="582" />
+
+<glyph glyph-name="ion-android-remove" unicode="&#xf2f4;" d="M0 309v82h625v-82h-625z" horiz-adv-x="625" />
+
+<glyph glyph-name="ion-android-arrow-forward" unicode="&#xf30f;" d="M0 309v82h508l-233 234 59 59 334-334-334-334-61 59 235 234h-508z" horiz-adv-x="668" />
+
+<glyph glyph-name="ion-android-arrow-down" unicode="&#xf35d;" d="M375 684v-508l234 235 59-61-334-334-334 334 59 59 234-233v508h82z" horiz-adv-x="668" />
+
+<glyph glyph-name="ion-android-arrow-up" unicode="&#xf366;" d="M375 16h-82v508l-234-233-59 59 334 334 334-334-59-60-234 234v-508z" horiz-adv-x="668" />
+
+<glyph glyph-name="ion-android-cart" unicode="&#xf370;" d="M238 112c45 0 80-35 80-80s-35-82-80-82-82 37-82 82 37 80 82 80z m-238 638h133l37-82h602c21 0 41-17 41-39 0-7-2-15-4-19l-147-252c-14-27-39-43-70-43h-303l-41-63s-4-9-4-11c0-6 4-10 10-10h465v-78h-475c-51 0-88 27-88 82 0 13 4 29 10 39l61 99-145 295h-82v82z m637-638c45 0 82-35 82-80s-37-82-82-82-80 37-80 82 35 80 80 80z" horiz-adv-x="812.5" />
+
+<glyph glyph-name="ion-android-done" unicode="&#xf383;" d="M238 186l450 449 62-60-512-510-238 238 63 61z" horiz-adv-x="750" />
+
+<glyph glyph-name="ion-ios-checkmark-empty" unicode="&#xf3fd;" d="M145 206c-4-4-12-8-18-8s-14 4-18 8l-109 109 35 35 92-92 244 246 33-35z" horiz-adv-x="404.3" />
+
+<glyph glyph-name="ion-ios-close-empty" unicode="&#xf404;" d="M352 538l23-24-164-164 164-164-23-23-164 164-165-164-23 23 164 164-164 164 23 24 165-165z" horiz-adv-x="375" />
+
+<glyph glyph-name="ion-ios-plus-empty" unicode="&#xf489;" d="M500 332h-234v-232h-34v232h-232v34h232v234h34v-234h234v-34z" horiz-adv-x="500" />
+
+<glyph glyph-name="ion-ios-search-strong" unicode="&#xf4a4;" d="M547 268l-8-14 211-213-66-66-211 213-14-10c-47-29-103-49-162-49-164 0-297 135-297 299s133 297 297 297 297-133 297-297c0-58-18-113-47-160z m-84 326c-45 45-104 69-166 69s-121-24-166-69-68-103-68-166 23-121 68-166 103-68 166-68 121 23 166 68 70 104 70 166-25 121-70 166z" horiz-adv-x="750" />
+
+<glyph glyph-name="ion-ios-search" unicode="&#xf4a5;" d="M750 20l-45-45-221 221c-50-41-117-65-187-65-164 0-297 133-297 297s133 297 297 297 297-133 297-297c0-70-24-135-65-185z m-641 219c51-51 118-76 188-76s137 27 187 78 79 117 79 187-28 137-79 188-117 78-187 78-137-28-188-78-78-118-78-188 28-138 78-189z" horiz-adv-x="750" />
+</font>
+</defs>
+</svg>

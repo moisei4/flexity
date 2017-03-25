@@ -530,6 +530,7 @@ return array(
 									),
 								),
 							),
+							'default' => 'Montserrat',
 						),
 						array(
 							'type' => 'radiobutton',

@@ -164,18 +164,6 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	// Top Menu Seacrh
-	$('.header').on('click', '#header-searchbtn', function () {
-		if ($(this).hasClass('opened')) {
-			$(this).removeClass('opened');
-			$('#header-search').fadeOut();
-		} else {
-			$(this).addClass('opened');
-			$('#header-search').fadeIn();
-		}
-		return false;
-	});
-
 
 	// Top Menu
 	$('.header').on('click', '#header-menutoggle', function () {
@@ -188,6 +176,8 @@ jQuery(document).ready(function ($) {
 		}
 		return false;
 	});
+	
+	
 	// Top SubMenu
 	$('#top-menu').on('click', '.menu-item-has-children > a', function () {
 		if ($(this).hasClass('opened')) {

@@ -93,11 +93,11 @@ function flexity_header_add_to_cart_fragment_cart( $fragments ) {
 	ob_start();
 	?>
 	<div class="header-cart-inner">
-		<p class="header-cart-count">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/cart.png" alt="">
+		<span class="header-cart-count">
+			<i class="stockware_theme_icon_header_cart"></i>
 			<span><?php echo WC()->cart->get_cart_contents_count()?></span>
-		</p>
-		<p class="header-cart-summ"><?php echo WC()->cart->get_cart_total(); ?></p>
+		</span>
+		<span class="header-cart-summ"><?php echo WC()->cart->get_cart_total(); ?></span>
 	</div>
 	<?php
 	$fragments['div.header-cart-inner'] = ob_get_clean();
