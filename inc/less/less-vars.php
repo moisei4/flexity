@@ -1,30 +1,30 @@
 <?php
 // add the font | Main Title
-$mainttl_font_face = (!empty($flexity_options['mainttl_font_face'])) ? $flexity_options['mainttl_font_face'] : '';
-$mainttl_font_weight = (!empty($flexity_options['mainttl_font_weight'])) ? $flexity_options['mainttl_font_weight'] : '';
-$mainttl_font_style  = (!empty($flexity_options['mainttl_font_style'])) ? $flexity_options['mainttl_font_style'] : '';
-$mainttl_font_subset  = (!empty($flexity_options['mainttl_font_subset'])) ? $flexity_options['mainttl_font_subset'] : '';
-$mainttl_font_size  = (!empty($flexity_options['mainttl_font_size'])) ? $flexity_options['mainttl_font_size'] : '';
+$h1_font_name = (!empty($flexity_options['h1_font_name'])) ? $flexity_options['h1_font_name'] : '';
+$h1_font_weight = (!empty($flexity_options['h1_font_weight'])) ? $flexity_options['h1_font_weight'] : '';
+$h1_font_style  = (!empty($flexity_options['h1_font_style'])) ? $flexity_options['h1_font_style'] : '';
+$h1_font_subset  = (!empty($flexity_options['h1_font_subset'])) ? $flexity_options['h1_font_subset'] : '';
+$h1_font_size  = (!empty($flexity_options['h1_font_size'])) ? $flexity_options['h1_font_size'] : '';
 if (class_exists('VP_Metabox')) {
-	VP_Site_GoogleWebFont::instance()->add($mainttl_font_face, $mainttl_font_weight, $mainttl_font_style, $mainttl_font_subset);
+	VP_Site_GoogleWebFont::instance()->add($h1_font_name, $h1_font_weight, $h1_font_style, $h1_font_subset);
 }
 
 // add the font | Normal Title
-$normalttl_font_face = (!empty($flexity_options['normalttl_font_face'])) ? $flexity_options['normalttl_font_face'] : '';
-$normalttl_font_weight = (!empty($flexity_options['normalttl_font_weight'])) ? $flexity_options['normalttl_font_weight'] : '';
-$normalttl_font_style  = (!empty($flexity_options['normalttl_font_style'])) ? $flexity_options['normalttl_font_style'] : '';
-$normalttl_font_subset  = (!empty($flexity_options['normalttl_font_subset'])) ? $flexity_options['normalttl_font_subset'] : '';
+$h2_font_name = (!empty($flexity_options['h2_font_name'])) ? $flexity_options['h2_font_name'] : '';
+$h2_font_weight = (!empty($flexity_options['h2_font_weight'])) ? $flexity_options['h2_font_weight'] : '';
+$h2_font_style  = (!empty($flexity_options['h2_font_style'])) ? $flexity_options['h2_font_style'] : '';
+$h2_font_subset  = (!empty($flexity_options['h2_font_subset'])) ? $flexity_options['h2_font_subset'] : '';
 if (class_exists('VP_Metabox')) {
-	VP_Site_GoogleWebFont::instance()->add($normalttl_font_face, $normalttl_font_weight, $normalttl_font_style, $normalttl_font_subset);
+	VP_Site_GoogleWebFont::instance()->add($h2_font_name, $h2_font_weight, $h2_font_style, $h2_font_subset);
 }
 
 // add the font | Text
-$text_font_face = (!empty($flexity_options['text_font_face'])) ? $flexity_options['text_font_face'] : '';
-$text_font_weight = (!empty($flexity_options['text_font_weight'])) ? $flexity_options['text_font_weight'] : '';
-$text_font_style  = (!empty($flexity_options['text_font_style'])) ? $flexity_options['text_font_style'] : '';
-$text_font_subset  = (!empty($flexity_options['text_font_subset'])) ? $flexity_options['text_font_subset'] : '';
+$content_font_name = (!empty($flexity_options['content_font_name'])) ? $flexity_options['content_font_name'] : '';
+$content_font_weight = (!empty($flexity_options['content_font_weight'])) ? $flexity_options['content_font_weight'] : '';
+$content_font_style  = (!empty($flexity_options['content_font_style'])) ? $flexity_options['content_font_style'] : '';
+$content_font_subset  = (!empty($flexity_options['content_font_subset'])) ? $flexity_options['content_font_subset'] : '';
 if (class_exists('VP_Metabox')) {
-	VP_Site_GoogleWebFont::instance()->add($text_font_face, $text_font_weight, $text_font_style, $text_font_subset);
+	VP_Site_GoogleWebFont::instance()->add($content_font_name, $content_font_weight, $content_font_style, $content_font_subset);
 }
 
 // embed font function
@@ -42,44 +42,44 @@ if (class_exists('VP_Metabox')) {
 }
 
 // Main Title	
-if (!empty($mainttl_font_face)) {
-	add_less_var( 'mainttl_font_face', "'".$mainttl_font_face."'" );
+if (!empty($h1_font_name)) {
+	add_less_var( 'h1_font_name', "'".$h1_font_name."'" );
 } else {
-	add_less_var( 'mainttl_font_face', 'Montserrat' );
+	add_less_var( 'h1_font_name', 'Montserrat' );
 }
-if (!empty($mainttl_font_weight)) {
-	add_less_var( 'mainttl_font_weight', $mainttl_font_weight );
+if (!empty($h1_font_weight)) {
+	add_less_var( 'h1_font_weight', $h1_font_weight );
 } else {
-	add_less_var( 'mainttl_font_weight', 700 );
+	add_less_var( 'h1_font_weight', 700 );
 }
-if (!empty($mainttl_font_size)) {
-	add_less_var( 'mainttl_font_size', $mainttl_font_size.'px' );
+if (!empty($h1_font_size)) {
+	add_less_var( 'h1_font_size', $h1_font_size.'px' );
 } else {
-	add_less_var( 'mainttl_font_size', '50px' );
+	add_less_var( 'h1_font_size', '50px' );
 }
 
 // Normal Title
-if (!empty($normalttl_font_face)) {
-	add_less_var( 'normalttl_font_face', "'".$normalttl_font_face."'" );
+if (!empty($h2_font_name)) {
+	add_less_var( 'h2_font_name', "'".$h2_font_name."'" );
 } else {
-	add_less_var( 'normalttl_font_face', 'Montserrat' );
+	add_less_var( 'h2_font_name', 'Montserrat' );
 }
-if (!empty($normalttl_font_weight)) {
-	add_less_var( 'normalttl_font_weight', $normalttl_font_weight );
+if (!empty($h2_font_weight)) {
+	add_less_var( 'h2_font_weight', $h2_font_weight );
 } else {
-	add_less_var( 'normalttl_font_weight', 700 );
+	add_less_var( 'h2_font_weight', 700 );
 }
 
 // Text
-if (!empty($text_font_face)) {
-	add_less_var( 'text_font_face', "'".$text_font_face."'" );
+if (!empty($content_font_name)) {
+	add_less_var( 'content_font_name', "'".$content_font_name."'" );
 } else {
-	add_less_var( 'text_font_face', 'Montserrat' );
+	add_less_var( 'content_font_name', 'Montserrat' );
 }
-if (!empty($text_font_weight)) {
-	add_less_var( 'text_font_weight', $text_font_weight );
+if (!empty($content_font_weight)) {
+	add_less_var( 'content_font_weight', $content_font_weight );
 } else {
-	add_less_var( 'text_font_weight', 300 );
+	add_less_var( 'content_font_weight', 300 );
 }
 
 // Primary Color
