@@ -631,7 +631,7 @@ return array(
 							'label'   => __('Content Line Height (px)', 'flexity'),
 							'min'     => '0',
 							'max'     => '100',
-							'default' => '28',
+							'default' => '25',
 						),
 					),
 				),

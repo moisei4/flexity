@@ -28,7 +28,7 @@
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+  vertical-align: baseline;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -58,6 +58,12 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
+[class^="stockware_theme_icon_"]:before, 
+[class*=" stockware_theme_icon_"]:before {
+	margin-left:0;
+	margin-right:0;
+}
+
 .stockware-icon-ion-checkmark-round:before { content: '\f121'; } /* '' */
 .stockware-icon-ion-checkmark:before { content: '\f122'; } /* '' */
 .stockware-icon-ion-chevron-down:before { content: '\f123'; } /* '' */

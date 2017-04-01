@@ -82,6 +82,14 @@ if (!empty($content_font_weight)) {
 	add_less_var( 'content_font_weight', 300 );
 }
 
+// Content Color
+(!empty($flexity_options['color_content'])) ? $color_content = $flexity_options['color_content'] : $color_content = '#4e4e4e';
+add_less_var( 'color_content', $color_content );
+
+// Heading Color
+(!empty($flexity_options['color_heading'])) ? $color_heading = $flexity_options['color_heading'] : $color_heading = '#17161a';
+add_less_var( 'color_heading', $color_heading );
+
 // Primary Color
 (!empty($flexity_options['color_primary'])) ? $color_primary = $flexity_options['color_primary'] : $color_primary = '#3252fd';
 add_less_var( 'color_primary', $color_primary );

@@ -843,10 +843,10 @@ button {
 		}
 	}
 	
-	.header_search_btn_wrap {
+	.header_search_wrap {
 		float: left;
 		display: block;
-		margin-right:30px;
+		margin-right:15px;
 		height: 100%;
 		position: relative;
 		
@@ -860,10 +860,106 @@ button {
 			font-size:21px;
 			color:@default_header_color;
 		}
+		
+		&.search_opened {
+			.header_search {
+				visibility:visible;
+				opacity:1;
+			}
+		}
 	}
 	
 	.header_search {
-		display:none;
+		text-align:center;
+		z-index:999;
+		visibility:hidden;
+		opacity:0;
+		position:fixed;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		background-color:#ffffff;
+		
+		.header_search_close {
+			.pos_abs(60px, 60px, 4%, auto, 70px, auto);
+			display:block;
+			.bdrs(50%);
+			background-color:@color_heading;
+			
+			&:before {
+				content:'\f404';
+				font-family:'fontello';
+				font-size:40px;
+				line-height:40px;
+				font-weight:bold;
+				color:#fff;
+				.pos_abs;
+			}
+		}
+		
+		.search_form {
+			width:540px;
+			height:50px;
+			display:inline-block;
+			vertical-align:middle;
+			position:relative;
+			
+			&:before {
+				content:'';
+				.pos_abs(100%, 2px, 0, 0, auto, -10px);
+				background-color:@color_heading;
+			}
+			
+			&.active {
+				&:before {
+					bottom:-5px;
+				}
+			}
+			
+			input {
+				font-size:30px;
+				line-height:50px;
+				color:@color_heading;
+				width:100%;
+				height:50px;
+				padding:0;
+				border:none;
+				background:none;
+				
+				&::-webkit-input-placeholder {
+					color:@color_heading;
+				}
+				
+				&::-moz-placeholder {
+					color:@color_heading;
+				}
+			}
+			
+			button {
+				display:block;
+				width:22px;
+				height:50px;
+				padding:0;
+				position:absolute;
+				right:0;
+				top:0;
+				bottom:0;
+				background:none;
+				color:@color_heading;
+				
+				.stockware_theme_icon_header_search {
+					.pos_abs;
+					font-size:22px;
+					line-height:22px;
+					text-align:right;
+				}
+			}
+		}
+		
+		&:after {
+			.valign_after;
+		}
 	}
 	
 	.header_cart_wrap {
@@ -896,7 +992,7 @@ button {
 			
 			[class^="stockware_theme_icon_"], 
 			[class*=" stockware_theme_icon_"] {
-				font-size:20px;
+				font-size:21px;
 				color:@default_header_color;
 				display:inline-block;
 				vertical-align:middle;
@@ -911,15 +1007,14 @@ button {
 				width: 20px;
 				height: 20px;
 				line-height: 20px;
-				font-size: 14px;
 				color: #fff;
-				font-weight: 400;
 			}
 		}
 		
 		.header-cart-summ {
 			display: inline-block;
 			vertical-align: middle;
+			color:@default_header_color;
 			
 			&:after {
 				.cl_after;
@@ -1125,6 +1220,22 @@ body.header-sticky .header.header_sticky {
 .header-menutoggle {
 	display: none;
 }
+
+#navigation {
+	position:relative;
+}
+
+.magic_nav_line {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:4px;
+	background-color:@color_primary;
+	.bdrs(0 0 4px 4px);
+	z-index:1;
+}
+
 .header {
 	nav {
 		padding:0;
@@ -1163,14 +1274,6 @@ body.header-sticky .header.header_sticky {
 				float:left;
 				height:100%;
 				padding:20px 30px;
-				
-				&:before {
-					content:'';
-					.pos_abs(100%, 4px, 0, 0, 0, auto);
-					background-color:@color_primary;
-					.bdrs(0 0 4px 4px);
-					opacity:0;
-				}
 				
 				&:after {
 					.valign_after;
@@ -1212,7 +1315,7 @@ body.header-sticky .header.header_sticky {
 				> ul {
 					position: absolute;
 					top: 100%;
-					left: -15px;
+					left: 0;
 					z-index: 12;
 					width: auto;
 					padding:0 0 8px 0;
@@ -1235,10 +1338,6 @@ body.header-sticky .header.header_sticky {
 				&.current-menu-ancestor,
 				&.current-menu-item,
 				&.current_page_item {
-					&:before {
-						opacity:1;
-					}
-					
 					> a {
 						color:@default_nav_title_active;
 						
@@ -1249,13 +1348,16 @@ body.header-sticky .header.header_sticky {
 				}
 				
 				&.menu-item-has-children {
+					padding-right:20px;
+					
 					> a {
 						padding-right:30px;
 						
 						&:before {
-							content:'\f107';
-							font-family:FontAwesome;
-							font-size:20px;
+							content:'\f123';
+							font-family:'fontello';
+							font-size:16px;
+							font-weight:normal;
 							line-height:20px;
 							text-align:right;
 							.pos_abs(20px, 20px, auto, 0, 0, 0);
@@ -10203,4 +10305,12 @@ input[type=submit],
 input[type=button], 
 button {
 	.trans(~'background-color .2s ease-in-out');
+}
+
+.header .header_search .search_form:before {
+	.trans(~'bottom .2s ease-in-out');
+}
+
+.header .header_search_wrap.search_opened .header_search {
+	.trans(~'visibility .3s ease-in-out, opacity .3s ease-in-out');
 }

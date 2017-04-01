@@ -98,12 +98,12 @@ body_class($sticky_header);
 		<div class="header-info">
 
 			<!-- Search Form -->
-			<div class="header_search_btn_wrap">
+			<div class="header_search_wrap">
 				<a href="#" class="header_search_btn stockware_theme_icon_header_search" id="header-searchbtn"></a>
-			</div>
-			<div class="header_search">
-				<a href="#" class="header_search_close"></a>
-				<?php get_search_form(); ?>
+				<div class="header_search">
+					<a href="#" class="header_search_close"></a>
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 			
 			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
@@ -180,7 +180,7 @@ body_class($sticky_header);
 			'container' => 'nav',
 			'container_class' => '',
 			'container_id' => 'top-menu',
-			'items_wrap' => '<ul>%3$s</ul>',
+			'items_wrap' => '<ul id="navigation">%3$s</ul>',
 		) );
 		?>
 		<!-- Navmenu - end -->
