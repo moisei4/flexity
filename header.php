@@ -181,6 +181,8 @@ body_class($sticky_header);
 			'container_class' => '',
 			'container_id' => 'top-menu',
 			'items_wrap' => '<ul id="navigation">%3$s</ul>',
+			'link_before' => 		'<span class="menu_item_wrap">', 
+			'link_after' => 		'</span>', 
 		) );
 		?>
 		<!-- Navmenu - end -->

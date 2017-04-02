@@ -27,7 +27,7 @@ $manifest['supported_extensions'] = array(
      * Because they has no sense to be available for a theme that is not configured to support them.
      */
     // 'styling' => array(),
-    // 'megamenu' => array(),
+    'megamenu' => array(),
 );
 
 $manifest['requirements'] = array(

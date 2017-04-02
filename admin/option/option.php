@@ -573,6 +573,22 @@ return array(
 							'default' => 'Montserrat',
 						),
 						array(
+							'type'    => 'slider',
+							'name'    => 'content_font_size',
+							'label'   => __('Content Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '15',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'content_line_height',
+							'label'   => __('Content Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '25',
+						),
+						array(
 							'type' => 'radiobutton',
 							'name' => 'content_font_style',
 							'label' => __('Content Font Style', 'flexity'),
@@ -617,22 +633,6 @@ return array(
 							),
 							'default' => 'latin'
 						),
-						array(
-							'type'    => 'slider',
-							'name'    => 'content_font_size',
-							'label'   => __('Content Font Size (px)', 'flexity'),
-							'min'     => '0',
-							'max'     => '80',
-							'default' => '15',
-						),
-						array(
-							'type'    => 'slider',
-							'name'    => 'content_line_height',
-							'label'   => __('Content Line Height (px)', 'flexity'),
-							'min'     => '0',
-							'max'     => '100',
-							'default' => '25',
-						),
 					),
 				),
 				array(
@@ -643,8 +643,8 @@ return array(
 							'type' => 'html',
 							'name' => 'h1_font_preview',
 							'binding' => array(
-								'field'    => 'h1_font_name,h1_font_style,h1_font_weight,h1_font_size,h1_line_height',
-								'function' => 'flexity_font_preview',
+								'field'    => 'h1_font_name,h1_font_style,h1_font_weight,h1_font_transform,h1_font_size,h1_line_height',
+								'function' => 'flexity_font_preview_transform',
 							),
 						),
 						array(
@@ -661,6 +661,22 @@ return array(
 								),
 							),
 							'default' => 'Montserrat',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h1_font_size',
+							'label'   => __('H1 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '35',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h1_line_height',
+							'label'   => __('H1 Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '45',
 						),
 						array(
 							'type' => 'radiobutton',
@@ -693,6 +709,30 @@ return array(
 							'default' => '700',
 						),
 						array(
+							'type' => 'select',
+							'name' => 'h1_font_transform',
+							'label' => __('H1 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'none',
+						),
+						array(
 							'type' => 'multiselect',
 							'name' => 'h1_font_subset',
 							'label' => __('H1 Font Subset', 'flexity'),
@@ -707,22 +747,6 @@ return array(
 							),
 							'default' => 'latin'
 						),
-						array(
-							'type'    => 'slider',
-							'name'    => 'h1_font_size',
-							'label'   => __('H1 Font Size (px)', 'flexity'),
-							'min'     => '0',
-							'max'     => '80',
-							'default' => '35',
-						),
-						array(
-							'type'    => 'slider',
-							'name'    => 'h1_line_height',
-							'label'   => __('H1 Line Height (px)', 'flexity'),
-							'min'     => '0',
-							'max'     => '100',
-							'default' => '45',
-						),
 					),
 				),
 				array(
@@ -731,10 +755,10 @@ return array(
 					'fields' => array(
 						array(
 							'type' => 'html',
-							'name' => 'normalttl_font_preview',
+							'name' => 'h2_font_preview',
 							'binding' => array(
-								'field'    => 'h2_font_name,h2_font_style,h2_font_weight,h2_font_size,h2_line_height',
-								'function' => 'flexity_font_preview',
+								'field'    => 'h2_font_name,h2_font_style,h2_font_weight,h2_font_transform,h2_font_size,h2_line_height',
+								'function' => 'flexity_font_preview_transform',
 							),
 						),
 						array(
@@ -751,6 +775,22 @@ return array(
 								),
 							),
 							'default' => 'Montserrat',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h2_font_size',
+							'label'   => __('H2 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '25',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h2_line_height',
+							'label'   => __('H2 Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '35',
 						),
 						array(
 							'type' => 'radiobutton',
@@ -783,6 +823,30 @@ return array(
 							'default' => '700',
 						),
 						array(
+							'type' => 'select',
+							'name' => 'h2_font_transform',
+							'label' => __('H2 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'none',
+						),
+						array(
 							'type' => 'multiselect',
 							'name' => 'h2_font_subset',
 							'label' => __('H2 Font Subset', 'flexity'),
@@ -797,21 +861,461 @@ return array(
 							),
 							'default' => 'latin'
 						),
+					),
+				),
+				array(
+					'type' => 'section',
+					'title' => __('H3 Heading Font', 'flexity'),
+					'fields' => array(
 						array(
-							'type'    => 'slider',
-							'name'    => 'h2_font_size',
-							'label'   => __('H2 Font Size (px)', 'flexity'),
-							'min'     => '0',
-							'max'     => '80',
-							'default' => '25',
+							'type' => 'html',
+							'name' => 'h3_font_preview',
+							'binding' => array(
+								'field'    => 'h3_font_name,h3_font_style,h3_font_weight,h3_font_transform,h3_font_size,h3_line_height',
+								'function' => 'flexity_font_preview_transform',
+							),
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h3_font_name',
+							'label' => __('H3 Font Name', 'flexity'),
+							'description' => __('click "x" to return the default', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'function',
+										'value' => 'vp_get_gwf_family',
+									),
+								),
+							),
+							'default' => 'Montserrat',
 						),
 						array(
 							'type'    => 'slider',
-							'name'    => 'h2_line_height',
-							'label'   => __('H2 Line Height (px)', 'flexity'),
+							'name'    => 'h3_font_size',
+							'label'   => __('H3 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '20',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h3_line_height',
+							'label'   => __('H3 Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '30',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h3_font_style',
+							'label' => __('H3 Font Style', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h3_font_name',
+										'value' => 'vp_get_gwf_style',
+									),
+								),
+							),
+							'default' => 'normal',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h3_font_weight',
+							'label' => __('H3 Font Weight', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h3_font_name',
+										'value' => 'vp_get_gwf_weight',
+									),
+								),
+							),
+							'default' => '700',
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h3_font_transform',
+							'label' => __('H3 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'uppercase',
+						),
+						array(
+							'type' => 'multiselect',
+							'name' => 'h3_font_subset',
+							'label' => __('H3 Font Subset', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h3_font_name',
+										'value' => 'vp_get_gwf_subset',
+									),
+								),
+							),
+							'default' => 'latin'
+						),
+					),
+				),
+				array(
+					'type' => 'section',
+					'title' => __('H4 Heading Font', 'flexity'),
+					'fields' => array(
+						array(
+							'type' => 'html',
+							'name' => 'h4_font_preview',
+							'binding' => array(
+								'field'    => 'h4_font_name,h4_font_style,h4_font_weight,h4_font_transform,h4_font_size,h4_line_height',
+								'function' => 'flexity_font_preview_transform',
+							),
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h4_font_name',
+							'label' => __('H4 Font Name', 'flexity'),
+							'description' => __('click "x" to return the default', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'function',
+										'value' => 'vp_get_gwf_family',
+									),
+								),
+							),
+							'default' => 'Montserrat',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h4_font_size',
+							'label'   => __('H4 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '20',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h4_line_height',
+							'label'   => __('H4 Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '30',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h4_font_style',
+							'label' => __('H4 Font Style', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h4_font_name',
+										'value' => 'vp_get_gwf_style',
+									),
+								),
+							),
+							'default' => 'normal',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h4_font_weight',
+							'label' => __('H4 Font Weight', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h4_font_name',
+										'value' => 'vp_get_gwf_weight',
+									),
+								),
+							),
+							'default' => '700',
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h4_font_transform',
+							'label' => __('H4 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'none',
+						),
+						array(
+							'type' => 'multiselect',
+							'name' => 'h4_font_subset',
+							'label' => __('H4 Font Subset', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h4_font_name',
+										'value' => 'vp_get_gwf_subset',
+									),
+								),
+							),
+							'default' => 'latin'
+						),
+					),
+				),
+				array(
+					'type' => 'section',
+					'title' => __('H5 Heading Font', 'flexity'),
+					'fields' => array(
+						array(
+							'type' => 'html',
+							'name' => 'h5_font_preview',
+							'binding' => array(
+								'field'    => 'h5_font_name,h5_font_style,h5_font_weight,h5_font_transform,h5_font_size,h5_line_height',
+								'function' => 'flexity_font_preview_transform',
+							),
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h5_font_name',
+							'label' => __('H5 Font Name', 'flexity'),
+							'description' => __('click "x" to return the default', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'function',
+										'value' => 'vp_get_gwf_family',
+									),
+								),
+							),
+							'default' => 'Montserrat',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h5_font_size',
+							'label'   => __('H5 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '14',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h5_line_height',
+							'label'   => __('H5 Line Height (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '100',
+							'default' => '25',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h5_font_style',
+							'label' => __('H5 Font Style', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h5_font_name',
+										'value' => 'vp_get_gwf_style',
+									),
+								),
+							),
+							'default' => 'normal',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h5_font_weight',
+							'label' => __('H5 Font Weight', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h5_font_name',
+										'value' => 'vp_get_gwf_weight',
+									),
+								),
+							),
+							'default' => '700',
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h5_font_transform',
+							'label' => __('H5 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'uppercase',
+						),
+						array(
+							'type' => 'multiselect',
+							'name' => 'h5_font_subset',
+							'label' => __('H5 Font Subset', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h5_font_name',
+										'value' => 'vp_get_gwf_subset',
+									),
+								),
+							),
+							'default' => 'latin'
+						),
+					),
+				),
+				array(
+					'type' => 'section',
+					'title' => __('H6 Heading Font', 'flexity'),
+					'fields' => array(
+						array(
+							'type' => 'html',
+							'name' => 'h6_font_preview',
+							'binding' => array(
+								'field'    => 'h6_font_name,h6_font_style,h6_font_weight,h6_font_transform,h6_font_size,h6_line_height',
+								'function' => 'flexity_font_preview_transform',
+							),
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h6_font_name',
+							'label' => __('H6 Font Name', 'flexity'),
+							'description' => __('click "x" to return the default', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'function',
+										'value' => 'vp_get_gwf_family',
+									),
+								),
+							),
+							'default' => 'Montserrat',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h6_font_size',
+							'label'   => __('H6 Font Size (px)', 'flexity'),
+							'min'     => '0',
+							'max'     => '80',
+							'default' => '12',
+						),
+						array(
+							'type'    => 'slider',
+							'name'    => 'h6_line_height',
+							'label'   => __('H6 Line Height (px)', 'flexity'),
 							'min'     => '0',
 							'max'     => '100',
 							'default' => '35',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h6_font_style',
+							'label' => __('H6 Font Style', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h6_font_name',
+										'value' => 'vp_get_gwf_style',
+									),
+								),
+							),
+							'default' => 'normal',
+						),
+						array(
+							'type' => 'radiobutton',
+							'name' => 'h6_font_weight',
+							'label' => __('H6 Font Weight', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h6_font_name',
+										'value' => 'vp_get_gwf_weight',
+									),
+								),
+							),
+							'default' => '700',
+						),
+						array(
+							'type' => 'select',
+							'name' => 'h6_font_transform',
+							'label' => __('H6 Text Transform', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'none',
+									'label' => __('None', 'flexity'),
+								),
+								array(
+									'value' => 'uppercase',
+									'label' => __('Uppercase', 'flexity'),
+								),
+								array(
+									'value' => 'lowercase',
+									'label' => __('Lowercase', 'flexity'),
+								),
+								array(
+									'value' => 'capitalize',
+									'label' => __('Capitalize', 'flexity'),
+								),
+							),
+							'default' => 'uppercase',
+						),
+						array(
+							'type' => 'multiselect',
+							'name' => 'h6_font_subset',
+							'label' => __('H6 Font Subset', 'flexity'),
+							'items' => array(
+								'data' => array(
+									array(
+										'source' => 'binding',
+										'field' => 'h6_font_name',
+										'value' => 'vp_get_gwf_subset',
+									),
+								),
+							),
+							'default' => 'latin'
 						),
 					),
 				),

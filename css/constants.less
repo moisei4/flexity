@@ -13,8 +13,6 @@
 @default_nav_title: rgba(23, 22, 26, .6);
 @default_nav_title_active: #17161a;
 
-@color: #4e4e4e;
-
 
 /* Theme Mixins */
 .bd (@w:1px; @t:solid) {
@@ -140,4 +138,10 @@
     -ms-transition:@trans;
     -o-transition:@trans;
     transition:@trans;
+}
+
+.transform(@transform:0) when not (@transform = 0) {
+    -webkit-transform:@transform;
+    -moz-transform:@transform;
+    transition:@transform;
 }
