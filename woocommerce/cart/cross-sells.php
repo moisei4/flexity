@@ -44,9 +44,7 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_cross_sells_columns',
 if ( $products->have_posts() ) : ?>
 
 <div class="cont maincont">
-	<h1><span><?php echo esc_html__('Recommended', 'flexity'); ?></span></h1>
-	<span class="maincont-line1"></span>
-	<span class="maincont-line2"></span>
+	<h1 class="page_title"><span><?php echo esc_html__('Recommended', 'flexity'); ?></span></h1>
 
 	<div class="prod-items section-gallery">
 

@@ -24,9 +24,7 @@ if (!$blog_sidebar_position)
 </div>
 
 <div class="cont maincont">
-	<h1><span><?php single_cat_title(); ?></span></h1>
-	<span class="maincont-line1"></span>
-	<span class="maincont-line2"></span>
+	<h1 class="page_title"><span><?php single_cat_title(); ?></span></h1>
 
 	<!-- Blog Sections -->
 	<ul class="cont-sections">

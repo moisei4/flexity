@@ -54,7 +54,7 @@ get_header( 'shop' ); ?>
 do_action( 'woocommerce_before_main_content' );
 ?>
 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-<h1><span><?php woocommerce_page_title(); ?></span></h1>
+<h1 class="page_title"><span><?php woocommerce_page_title(); ?></span></h1>
 <span class="maincont-line1"></span>
 <span class="maincont-line2<?php if ($wp_query->max_num_pages > 1) echo ' maincont-line2-pagi'; ?>"></span>
 <?php endif; ?>

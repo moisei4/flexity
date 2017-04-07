@@ -24,22 +24,22 @@ global $flexity_options; ?>
 	<div id="primary" class="content-area<?php echo ' width-'.esc_attr($page_width); ?>">
 		<main id="main" class="site-main">
 		
-			<div class="page_title_wrap">
+			<div class="title_line_wrap">
+			<?php if ($ttl_bcrumbs !== 'hide_both' || $ttl_bcrumbs !== 'only_bcrumbs') : ?>
+				<div class="page_title_wrap">
+					<h1 class="entry-title page_title"><?php the_title(); ?></h1>
+				</div>
+			<?php endif; ?>
+			
 			<?php if (!is_front_page() && $ttl_bcrumbs !== 'hide_both' && $ttl_bcrumbs !== 'only_ttl') : ?>
 				<!-- Breadcrumbs -->
 				<div class="b-crumbs-wrap">
 					<?php if ( class_exists( 'WooCommerce' ) ) : ?>
-						<div class="cont b-crumbs">
-							<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul>', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
+						<div class="b-crumbs">
+							<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
 						</div>
 					<?php endif; ?>
 				</div>
-			<?php endif; ?>
-			
-			<?php if ($ttl_bcrumbs !== 'hide_both' || $ttl_bcrumbs !== 'only_bcrumbs') : ?>
-			<div class="page-title">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</div>
 			<?php endif; ?>
 			</div>
 			

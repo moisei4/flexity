@@ -25,9 +25,7 @@ $cart_template = $flexity_options['flexity_cart_template'];
 <div class="cont maincont">
 	<?php do_action( 'woocommerce_before_cart' ); ?>
 
-	<h1><span><?php the_title(); ?></span></h1>
-	<span class="maincont-line1"></span>
-	<span class="maincont-line2"></span>
+	<h1 class="page_title"><span><?php the_title(); ?></span></h1>
 
 	<?php get_template_part('template-parts/personal-menu'); ?>
 

@@ -35,9 +35,7 @@
 
 	<div class="cont maincont">
 
-		<h1><span><?php esc_html_e('Search Products by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
-		<span class="maincont-line1"></span>
-		<span class="maincont-line2"></span>
+		<h1 class="page_title"><span><?php esc_html_e('Search Products by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
 
 		<p class="section-count"><?php echo esc_attr($products_count); ?> <?php esc_html_e('ITEMS', 'flexity'); ?></p>
 
@@ -61,9 +59,7 @@
 
 	<div class="cont maincont">
 
-		<h1><span><?php esc_html_e('Search Posts by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
-		<span class="maincont-line1"></span>
-		<span class="maincont-line2"></span>
+		<h1 class="page_title"><span><?php esc_html_e('Search Posts by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
 
 		<p class="section-count"><?php echo esc_attr($posts_count); ?> <?php esc_html_e('ITEMS', 'flexity'); ?></p>
 
@@ -104,9 +100,7 @@
 
 	<div class="cont maincont">
 
-		<h1><span><?php esc_html_e('Search Pages by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
-		<span class="maincont-line1"></span>
-		<span class="maincont-line2"></span>
+		<h1 class="page_title"><span><?php esc_html_e('Search Pages by', 'flexity'); ?> "<?php echo get_search_query(); ?>"</span></h1>
 
 		<p class="section-count"><?php echo esc_attr($others_count); ?> <?php esc_html_e('ITEMS', 'flexity'); ?></p>
 
@@ -154,9 +148,7 @@ else :
 	$search_query = get_search_query();
 ?>
 <div class="cont maincont">
-	<h1><span><?php esc_html_e( 'Nothing not found', 'flexity' ); ?></span></h1>
-	<span class="maincont-line1"></span>
-	<span class="maincont-line2"></span>
+	<h1 class="page_title"><span><?php esc_html_e( 'Nothing not found', 'flexity' ); ?></span></h1>
 
 	<div class="pagecont err404">
 		<p class="search-err-ttl"><?php echo sprintf( esc_html__( 'Nothing not found for your query "%s". Please try again', 'flexity' ), $search_query ); ?></p>

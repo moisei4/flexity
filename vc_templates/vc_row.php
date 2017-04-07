@@ -158,8 +158,6 @@ if ($atts['layout'] == 'boxed') {
 
 	if (!empty($atts['row_title'])) {
 		$output .= '<h1 class="row-wrap-ttl"><span>'.$atts['row_title'].'</span></h1>';
-		$output .= '<span class="maincont-line1"></span>';
-		$output .= '<span class="maincont-line2"></span>';
 		if (!empty($atts['row_subtitle'])) {
 			$output .= '<p class="section-count">'.$atts['row_subtitle'].'</p>';
 		}
@@ -178,8 +176,6 @@ if ($atts['layout'] == 'boxed') {
 	if (!empty($atts['row_title'])) {
 		$output .= '<div class="container page-styling row-wrap-container">';
 		$output .= '<h2 class="row-wrap-ttl"><span>'.$atts['row_title'].'</span></h2>';
-		$output .= '<span class="maincont-line1"></span>';
-		$output .= '<span class="maincont-line2"></span>';
 		if (!empty($atts['row_subtitle'])) {
 			$output .= '<p class="section-count">'.$atts['row_subtitle'].'</p>';
 		}

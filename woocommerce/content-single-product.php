@@ -30,8 +30,6 @@ if (function_exists('vp_metabox')) {
 <article itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>">
 
 <?php woocommerce_template_single_title(); ?>
-<span class="maincont-line1"></span>
-<span class="maincont-line2"></span>
 
 <?php
 	 if ( post_password_required() ) {
