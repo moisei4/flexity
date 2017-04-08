@@ -111,29 +111,12 @@ return array(
 					'title' => esc_html__('Copyright', 'flexity'),
 					'fields' => array(
 						array(
-							'type' => 'textbox',
+							'type' => 'codeeditor',
 							'name' => 'flexity_footer_copyright',
-							'label' => esc_html__('Copyright', 'flexity'),
-							'description' => '',
-							'default' => '&copy; 2016 Stockware All Right Received',
-						),
-					),
-				),
-				array(
-					'type' => 'section',
-					'title' => esc_html__('Footer Forms', 'flexity'),
-					'fields' => array(
-						array(
-							'type' => 'textarea',
-							'name' => 'flexity_footer_form_1',
-							'label' => esc_html__('Subscribe Form', 'flexity'),
-							'description' => 'Enter the shortcode of the form, that generated from the plugin "Contact Form 7"',
-						),
-						array(
-							'type' => 'textarea',
-							'name' => 'flexity_footer_form_2',
-							'label' => esc_html__('Modal Form', 'flexity'),
-							'description' => 'Enter the shortcode of the form, that generated from the plugin "Contact Form 7"',
+							'label' => __('Copyright', 'flexity'),
+							'description' => __('Write your custom html here.', 'flexity'),
+							'theme' => 'github',
+							'mode' => 'html',
 						),
 					),
 				),
@@ -141,13 +124,6 @@ return array(
 					'type'      => 'section',
 					'title'     => esc_html__('Social Links', 'flexity'),
 					'fields'    => array(
-						array(
-							'type' => 'notebox',
-							'name' => 'flexity_footer_nb',
-							'label' => esc_html__('Social Links', 'flexity'),
-							'description' => esc_html__('Social Links (with http:// protocol) <br>Icons "Font Awesome Icon - https://fortawesome.github.io/Font-Awesome/icons/ (f. e. &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;)"', 'flexity'),
-							'status' => 'normal',
-						),
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_link_1',
@@ -157,6 +133,13 @@ return array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_1',
 							'label' => 'Icon 1',
+						),
+						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_1',
+							'label' => esc_html__('Color 1', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#23599b',
 						),
 						array(
 							'type' => 'textbox',
@@ -169,6 +152,13 @@ return array(
 							'label' => 'Icon 2',
 						),
 						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_2',
+							'label' => esc_html__('Color 2', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#4982ab',
+						),
+						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_link_3',
 							'label' => 'Link 3',
@@ -177,6 +167,13 @@ return array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_3',
 							'label' => 'Icon 3',
+						),
+						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_3',
+							'label' => esc_html__('Color 3', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#00a2f6',
 						),
 						array(
 							'type' => 'textbox',
@@ -189,6 +186,13 @@ return array(
 							'label' => 'Icon 4',
 						),
 						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_4',
+							'label' => esc_html__('Color 4', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#fe4b37',
+						),
+						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_link_5',
 							'label' => 'Link 5',
@@ -199,6 +203,13 @@ return array(
 							'label' => 'Icon 5',
 						),
 						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_5',
+							'label' => esc_html__('Color 5', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#ff1514',
+						),
+						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_link_6',
 							'label' => 'Link 6',
@@ -207,6 +218,13 @@ return array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_6',
 							'label' => 'Icon 6',
+						),
+						array(
+							'type' => 'color',
+							'name' => 'flexity_footer_color_6',
+							'label' => esc_html__('Color 6', 'flexity'),
+							'format' => 'HEX',
+							'default' => '#303030',
 						),
 						array(
 							'type' => 'textbox',

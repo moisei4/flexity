@@ -45,6 +45,7 @@ if ( ! function_exists( 'flexity_setup' ) ) {
 			'rw-footer-menu-1' => esc_html__( 'Footer Menu 1', 'flexity' ),
 			'rw-footer-menu-2' => esc_html__( 'Footer Menu 2', 'flexity' ),
 			'rw-footer-menu-3' => esc_html__( 'Footer Menu 3', 'flexity' ),
+			'rw-footer-menu-4' => esc_html__( 'Footer Menu 4', 'flexity' ),
 		) );
 
 		/*

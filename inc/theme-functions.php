@@ -12,7 +12,7 @@ function flexity_print_nav_menu ($location = '') {
 			'container' => '',
 			'container_class' => '',
 			'menu_class' => '',
-			'items_wrap' => '<p>'.esc_html($menu_obj_1->name).'</p><ul>%3$s</ul>',
+			'items_wrap' => '<h3 class="footer_menu_ttile">'.esc_html($menu_obj_1->name).'</h3><ul>%3$s</ul>',
 		) );
 	}
 }
