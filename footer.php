@@ -11,7 +11,7 @@ global $flexity_options;
 	<div class="footer_social">
 		<ul class="footer_social_list"> 
 			<?php for ($i = 1; $i <= 10; $i++) : ?>
-				<?php if (!empty($flexity_options['flexity_footer_link_'.$i]) && !empty($flexity_options['flexity_footer_icon_'.$i])) : ?>
+				<?php if (!empty($flexity_options['flexity_footer_color_'.$i]) && !empty($flexity_options['flexity_footer_link_'.$i]) && !empty($flexity_options['flexity_footer_icon_'.$i])) : ?>
 				<li>
 					<a style="background-color:<?php echo esc_attr($flexity_options['flexity_footer_color_'.$i]); ?>;" rel="nofollow" target="_blank" href="<?php echo esc_url($flexity_options['flexity_footer_link_'.$i]); ?>">
 						<?php echo wp_kses_post($flexity_options['flexity_footer_icon_'.$i]); ?>

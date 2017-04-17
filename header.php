@@ -168,7 +168,7 @@ body_class($sticky_header);
 			<a href="<?php echo (!empty($flexity_options['compare']['id'])) ? get_permalink($flexity_options['compare']['id']) : ''; ?>" class="header-compare"><?php if (count($flexity_options['compare']['list'])) : ?><span><?php echo count($flexity_options['compare']['list'])?></span><?php endif; ?></a>
 			<?php endif; ?>
 			<?php if (!empty($flexity_options['wishlist']['id'])) : ?>
-			<a href="<?php echo (!empty($flexity_options['wishlist']['id'])) ? get_permalink($flexity_options['wishlist']['id']) : ''; ?>" class="header-favorites"><?php if (!empty($flexity_options['wishlist']['count'])) : ?><span><?php echo esc_attr($flexity_options['wishlist']['count']); ?></span><?php endif; ?></a>
+			<a href="<?php echo (!empty($flexity_options['wishlist']['id'])) ? get_permalink($flexity_options['wishlist']['id']) : ''; ?>" class="header_favorites"><?php if (!empty($flexity_options['wishlist']['count'])) : ?><span><?php echo esc_attr($flexity_options['wishlist']['count']); ?></span><?php endif; ?></a>
 			<?php endif; ?>
 
 		</div>

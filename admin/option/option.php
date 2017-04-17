@@ -132,7 +132,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_1',
-							'label' => 'Icon 1',
+							'label' => 'Text 1',
 						),
 						array(
 							'type' => 'color',
@@ -149,7 +149,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_2',
-							'label' => 'Icon 2',
+							'label' => 'Text 2',
 						),
 						array(
 							'type' => 'color',
@@ -166,7 +166,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_3',
-							'label' => 'Icon 3',
+							'label' => 'Text 3',
 						),
 						array(
 							'type' => 'color',
@@ -183,7 +183,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_4',
-							'label' => 'Icon 4',
+							'label' => 'Text 4',
 						),
 						array(
 							'type' => 'color',
@@ -200,7 +200,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_5',
-							'label' => 'Icon 5',
+							'label' => 'Text 5',
 						),
 						array(
 							'type' => 'color',
@@ -217,7 +217,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_6',
-							'label' => 'Icon 6',
+							'label' => 'Text 6',
 						),
 						array(
 							'type' => 'color',
@@ -234,7 +234,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_7',
-							'label' => 'Icon 7',
+							'label' => 'Text 7',
 						),
 						array(
 							'type' => 'textbox',
@@ -244,7 +244,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_8',
-							'label' => 'Icon 8',
+							'label' => 'Text 8',
 						),
 						array(
 							'type' => 'textbox',
@@ -254,7 +254,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_9',
-							'label' => 'Icon 9',
+							'label' => 'Text 9',
 						),
 						array(
 							'type' => 'textbox',
@@ -264,7 +264,7 @@ return array(
 						array(
 							'type' => 'textbox',
 							'name' => 'flexity_footer_icon_10',
-							'label' => 'Icon 10',
+							'label' => 'Text 10',
 						),
 					),
 				),

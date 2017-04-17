@@ -316,25 +316,20 @@ body .maincont > h1 {
 }
 
 .pagecont {
-	box-shadow: inset 0 -4px 0px 0px #dfe2f0, 0 10px 20px 0px rgba(192,196,215,0.25);
 	background: #fff;
-	border-radius: 4px;
 	position: relative;
 	z-index: 2;
 }
 
 .page-cont {
-	box-shadow: inset 0 -4px 0px 0px #dfe2f0, 0 10px 20px 0px rgba(192,196,215,0.25);
 	background: #fff;
 	position: relative;
 	z-index: 2;
-	padding: 45px 50px 50px;
-	font-size: 15px;
-}
-.page-cont:after {
-	content: '';
-	display: block;
-	clear: both;
+	padding: 30px 50px;
+	
+	&:after {
+		.cl_after;
+	}
 }
 
 .page-styling:after {
@@ -1105,7 +1100,16 @@ button {
 					.menu_item_wrap {
 						font-family:@content_font_name, sans-serif;
 						font-size: 17px;
-						font-weight: 600;
+						font-weight: bold;
+					}
+				}
+				
+				&.menu-item-has-mega-menu {
+					&:hover {
+						> .mega-menu {
+							opacity:1;
+							visibility:visible;
+						}
 					}
 				}
 				
@@ -1129,7 +1133,7 @@ button {
 							
 							.menu_item_wrap {
 								font-family:@content_font_name, sans-serif;
-								font-weight: normal;
+								font-weight: 500;
 								text-transform:uppercase;
 							}
 						}
@@ -1237,9 +1241,50 @@ button {
 					top:100%;
 					opacity:0;
 					visibility:hidden;
+					z-index:999;
+					box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
 					
 					ul {
-						display:block;
+						width:auto;
+						position:relative;
+						top:auto;
+						left:auto;
+						display:table;
+						opacity:1;
+						visibility:visible;
+						box-shadow:none;
+						
+						> li {
+							display:table-cell;
+							
+							> ul {
+								display:block;
+								
+								> li {
+									display:block;
+								}
+							}
+						}
+						
+						&.mega-menu-row {
+							width:auto;
+						}
+					}
+					
+					.mega-menu-col {
+						> a {
+							background:none;
+							
+							.menu_item_wrap {
+								font-family: @h3_font_name, sans-serif;
+								font-size: @h3_font_size;
+								line-height: @h3_line_height;
+								font-style:@h3_font_style;
+								font-weight: @h3_font_weight;
+								text-transform:@h3_font_transform;
+								color:#909db8;
+							}
+						}
 					}
 				}
 			}
@@ -1402,9 +1447,9 @@ body.header-sticky .header.header_sticky {
 .header .header-compare:hover {
 	background-color: lighten(@color_header, 8%);
 }
-.header .header-favorites {
+.header .header_favorites {
 	float: right;
-	display: block;
+	display: none;
 	height: 100%;
 	width: 13%;
 	background: url(../img/favorites.png) no-repeat center center;
@@ -1412,7 +1457,7 @@ body.header-sticky .header.header_sticky {
 	transition: all 0.2s;
 	position: relative;
 }
-.header .header-favorites span {
+.header .header_favorites span {
 	background: @color_primary;
 	display: block;
 	text-align: center;
@@ -1428,7 +1473,7 @@ body.header-sticky .header.header_sticky {
 	color: #fff;
 	font-weight: 700;
 }
-.header .header-favorites:hover {
+.header .header_favorites:hover {
 	background-color: lighten(@color_header, 8%);
 }
 
@@ -7589,7 +7634,6 @@ ul.cont-sections {
 	top: auto;
 	right: auto;
 	list-style: none;
-
 	width: 62%;
 	max-width: initial;
 	text-align: right;
@@ -7597,8 +7641,6 @@ ul.cont-sections {
 	vertical-align: top;
 	margin: 0;
 	padding: 9px 30px 9px 10px;
-
-	height: 28px;
 	overflow: hidden;
 	z-index: 11;
 }
@@ -7644,18 +7686,25 @@ ul.cont-sections .cont-sections-sub li:after {
 ul.cont-sections .cont-sections-more:hover .cont-sections-sub {
 	display: block;
 }
-.cont-sections li {
-	display: inline-block;
-	text-transform: uppercase;
-	padding: 0 22px 10px;
-	margin: 0;
-	font-size: 13px;
-	vertical-align: middle;
-	font-weight: 600;
+
+.cont-sections {
+	li {
+		margin:0;
+		display: inline-block;
+		vertical-align: middle;
+		
+		a {
+			font-family: @h6_font_name, sans-serif;
+			font-size: @h6_font_size;
+			line-height: @h6_line_height;
+			font-style:@h6_font_style;
+			font-weight: @h6_font_weight;
+			text-transform:@h6_font_transform;
+		}
+	}
 }
+
 ul.cont-sections li {
-	line-height: 1.42857143;
-	background: @color_body;
 	position: relative;
 	z-index: 12;
 }
