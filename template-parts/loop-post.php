@@ -24,26 +24,31 @@
 			</ul>
 		</div>
 		<?php elseif (!empty($blog_video)) : ?>
-		<div class="blog-img">
+		<div class="blog_img">
 			<?php echo wp_oembed_get($blog_video); ?>
 		</div>
 		<?php elseif (has_post_thumbnail()) : ?>
-		<a href="<?php the_permalink(); ?>" class="blog-img">
+		<a href="<?php the_permalink(); ?>" class="blog_img">
 			<?php the_post_thumbnail('flexity_blog'); ?>
 		</a>
 		<?php endif; ?>
-		<p class="blog-info">
+		<div class="blog_info entry-meta">
 			<?php
 			if (!empty($category)) {
+				echo '<ul class="post_category_list">';
+				
 				foreach ($category as $key=>$categ) {
-					echo '<a href="'.esc_url(get_category_link($categ->term_id)).'">'.esc_attr($categ->name).'</a>';
-					echo ($key+1<count($category)) ? ', ' : '';
+					echo '<li><a href="'.esc_url(get_category_link($categ->term_id)).'">'.esc_attr($categ->name).'</a>' . (($key+1<count($category)) ? ', ' : '') . '</li>';
 				}
+				
+				echo '</ul>';
 			}
 			?>
-			<time datetime="<?php echo get_the_date('Y-m-d H:i'); ?>"><?php echo get_the_date(); ?></time>
-		</p>
-		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>"><?php echo esc_html__('read more', 'flexity'); ?></a></p>
+			<abbr class="post_time" title="<?php echo get_the_date('Y-m-d H:i'); ?>"><?php echo get_the_date(); ?></abbr>
+		</div>
+		<header class="post_header">
+			<h2 class="post_title entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		</header>
+		<div class="post_content entry-content"><?php echo get_the_excerpt(); ?></div>
 	</div>
 </article>

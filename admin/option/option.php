@@ -532,6 +532,14 @@ return array(
 						),
 						array(
 							'type' => 'color',
+							'name' => 'color_border',
+							'label' => esc_html__('Border Color', 'flexity'),
+							'description' => 'Default Color - #dde0e5',
+							'format' => 'HEX',
+							'default' => '#dde0e5',
+						),
+						array(
+							'type' => 'color',
 							'name' => 'color_header',
 							'label' => esc_html__('Header Background Color', 'flexity'),
 							'description' => 'Default Color - #ffffff',
@@ -1294,7 +1302,7 @@ return array(
 									),
 								),
 							),
-							'default' => '700',
+							'default' => '500',
 						),
 						array(
 							'type' => 'select',

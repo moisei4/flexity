@@ -40,7 +40,7 @@ get_header( 'shop' ); ?>
 <div class="b-crumbs-wrap">
 	<?php if ( class_exists( 'WooCommerce' ) ) : ?>
 	<div class="cont b-crumbs">
-		<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul>', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
+		<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
 	</div>
 	<?php endif; ?>
 </div>

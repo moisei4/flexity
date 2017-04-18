@@ -328,6 +328,10 @@ add_less_var( 'color_heading', $color_heading );
 (!empty($flexity_options['color_primary'])) ? $color_primary = $flexity_options['color_primary'] : $color_primary = '#3252fd';
 add_less_var( 'color_primary', $color_primary );
 
+// Border Color
+(!empty($flexity_options['color_border'])) ? $color_border = $flexity_options['color_border'] : $color_border = '#dde0e5';
+add_less_var( 'color_border', $color_border );
+
 // Body Background
 (!empty($flexity_options['color_body'])) ? $color_body = $flexity_options['color_body'] : $color_body = '#f0f3f9';
 add_less_var( 'color_body', $color_body );
