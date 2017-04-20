@@ -100,8 +100,8 @@ global $flexity_options; ?>
 									'after'            => '</p>',
 									'link_before'      => '<span>',
 									'link_after'       => '</span>',
-									'nextpagelink'     => '<i class="fa fa-angle-right"></i>',
-									'previouspagelink' => '<i class="fa fa-angle-left"></i>',
+									'nextpagelink'     =>  esc_html__('Next', 'flexity'),
+									'previouspagelink' =>  esc_html__('Prev', 'flexity'),
 								) );
 
 								if ( comments_open() || get_comments_number() ) {

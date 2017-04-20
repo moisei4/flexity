@@ -10,15 +10,6 @@ if (!$post_sidebar_position)
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-<!-- Breadcrumbs -->
-<div class="b-crumbs-wrap b-crumbs-wrap2">
-	<?php if ( class_exists( 'WooCommerce' ) ) : ?>
-	<div class="cont b-crumbs">
-		<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
-	</div>
-	<?php endif; ?>
-</div>
-
 <div class="maincont">
 
 <?php if (have_posts()) : the_post(); ?>
@@ -59,9 +50,9 @@ if (!$post_sidebar_position)
 		<?php $in_top_slider = true; ?>
 	<?php
 	elseif (has_post_thumbnail()) :
-		echo '<p class="post-img">';
+		echo '<div class="post-img">';
 		the_post_thumbnail('flexity_full');
-		echo '</p>';
+		echo '</div>';
 		?>
 	<?php endif; ?>
 
@@ -80,18 +71,34 @@ if (!$post_sidebar_position)
 		<!-- Post Content - start -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class('s-post page-styling'); ?>>
 
-
-			<div class="post-info">
+			<!-- Breadcrumbs -->
+			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+			<div class="b-crumbs">
+				<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
+			</div>
+			<?php endif; ?>
+			<abbr class="single_post_date published" title="<?php echo get_the_date('Y-m-d H:i'); ?>"><?php echo get_the_date(); ?></abbr>
+			<div class="cl"></div>
+			<h1 class="single_post_title entry-title"><?php the_title(); ?></h1>
+			<div class="post_info">
 				<?php
+				
+				flexity_set_post_views(get_the_ID());
+				
+				echo flexity_get_post_views(get_the_ID());
+				
+				flexity_get_comments('single_post_comments', true);
+				
 				if (!empty($category)) {
+					echo '<ul class="single_post_category">';
+					
 					foreach ($category as $key=>$categ) {
-						echo '<a href="'.esc_url(get_category_link($categ->term_id)).'">'.esc_attr($categ->name).'</a>';
-						echo ($key+1<count($category)) ? ', ' : '';
+						echo '<li><a href="'.esc_url(get_category_link($categ->term_id)).'">'.esc_attr($categ->name).'</a>' . (($key+1<count($category)) ? ', ' : '') . '</li>';
 					}
+					
+					echo '</ul>';
 				}
 				?>
-				<h1><?php the_title(); ?></h1>
-				<time datetime="<?php echo get_the_date('Y-m-d H:i'); ?>"><span><?php echo get_the_date('d'); ?></span> <?php echo get_the_date('M'); ?></time>
 			</div>
 
 			<?php
@@ -137,8 +144,8 @@ if (!$post_sidebar_position)
 				'after'            => '</p>',
 				'link_before'      => '<span>',
 				'link_after'       => '</span>',
-				'nextpagelink'     => '<i class="fa fa-angle-right"></i>',
-				'previouspagelink' => '<i class="fa fa-angle-left"></i>',
+				'nextpagelink'     =>  esc_html__('Next', 'flexity'),
+				'previouspagelink' =>  esc_html__('Prev', 'flexity'),
 			) );
 
 			// Social Share

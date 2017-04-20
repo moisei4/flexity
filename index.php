@@ -87,8 +87,8 @@ if (!$blog_sidebar_position)
 				'add_args'     => '',
 				'current'      => max( 1, get_query_var( 'paged' ) ),
 				'total'        => $wp_query->max_num_pages,
-				'prev_text'    => '<i class="fa fa-angle-left"></i>',
-				'next_text'    => '<i class="fa fa-angle-right"></i>',
+				'prev_text'    =>  esc_html__('Prev', 'flexity'),
+				'next_text'    =>  esc_html__('Next', 'flexity'),
 				'type'         => 'list',
 				'end_size'     => 1,
 				'mid_size'     => 2

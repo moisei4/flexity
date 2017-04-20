@@ -380,7 +380,7 @@ return array(
 								),
 							),
 							'default' => array(
-								'full'
+								'right'
 							),
 						),
 					),

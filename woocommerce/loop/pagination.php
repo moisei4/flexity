@@ -33,8 +33,8 @@ echo paginate_links( apply_filters( 'woocommerce_pagination_args', array(
 	'add_args'     => false,
 	'current'      => max( 1, get_query_var( 'paged' ) ),
 	'total'        => $wp_query->max_num_pages,
-	'prev_text'    => '<i class="fa fa-angle-left"></i>',
-	'next_text'    => '<i class="fa fa-angle-right"></i>',
+	'prev_text'    =>  esc_html__('Prev', 'flexity'),
+	'next_text'    =>  esc_html__('Next', 'flexity'),
 	'type'         => 'list',
 	'end_size'     => 3,
 	'mid_size'     => 3

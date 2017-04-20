@@ -95,3 +95,57 @@ function flexity_get_attach_id_from_src($image_url) {
 
 	return $res[0]->post_id;
 }
+
+
+
+/* Get Comments */
+function flexity_get_comments($class = false, $show = false) { 
+	$out = '';
+	
+	
+	if (comments_open()) {
+		$out .= '<span class="stockware_comments' . ($class ? ' ' . $class : '') . '">' . 
+			'<a class="stockware_theme_icon_comment" href="' . esc_url(get_comments_link()) . '" title="' . esc_attr__('Comment on', 'flexity') . ' ' . esc_attr(get_the_title()) . '">' . 
+				'<span>' . esc_html(get_comments_number()) . esc_html__(' comments', 'flexity') . '</span>' . 
+			'</a>' . 
+		'</span>';
+	}
+	
+	
+	if ($show) {
+		echo $out;
+	} else {
+		return $out;
+	}
+}
+
+
+
+/* Get Views */
+function flexity_get_post_views($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+	
+    if ($count=='') {
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+		
+        return '<span class="stockware_views stockware_theme_icon_views">' . esc_html__('0 view', 'flexity') . '</span>';
+    }
+	
+    return '<span class="stockware_views stockware_theme_icon_views">' . $count . esc_html__(' views', 'flexity') . '</span>';
+}
+
+function flexity_set_post_views($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+	
+    if ($count=='') {
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
