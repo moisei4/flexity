@@ -148,17 +148,19 @@ if (!$post_sidebar_position)
 				'previouspagelink' =>  esc_html__('Prev', 'flexity'),
 			) );
 
-			// Social Share
-			if (!empty($flexity_options['flexity_other_share'])) {
-				include( trailingslashit( get_template_directory() ) . 'template-parts/share.php' );
-			}
-
+			flexity_get_post_author('', true);
+			
 			$closed_cmts_class = '';
 			if ( !comments_open() ) {
 				$closed_cmts_class = ' comments-closed';
 			}
-
+			
 			the_tags('<div class="post-tags'.$closed_cmts_class.'"><span>'.esc_html__('Tags', 'flexity').'</span>', '', '</div>');
+			
+			// Social Share
+			if (!empty($flexity_options['flexity_other_share'])) {
+				include( trailingslashit( get_template_directory() ) . 'template-parts/share.php' );
+			}
 
 			if ( comments_open() || get_comments_number() ) {
 				comments_template();

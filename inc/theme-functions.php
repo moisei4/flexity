@@ -121,6 +121,25 @@ function flexity_get_comments($class = false, $show = false) {
 
 
 
+/* Get Posts Author */
+function flexity_get_post_author($template_type = '', $show = true) {
+	$out = '<span class="post_author">' . 
+		esc_html__('by', 'flexity') . ' ' . 
+		'<a href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '" title="' . esc_attr__('Posts by', 'flexity') . ' ' . esc_attr(get_the_author_meta('display_name')) . '" class="vcard author">' . 
+			'<span class="fn" rel="author">' . esc_html(get_the_author_meta('display_name')) . '</span>' . 
+		'</a>' . 
+	'</span>';
+	
+	
+	if ($show) {
+		echo $out;
+	} else {
+		return $out;
+	}
+}
+
+
+
 /* Get Views */
 function flexity_get_post_views($postID){
     $count_key = 'post_views_count';
