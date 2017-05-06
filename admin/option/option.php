@@ -14,10 +14,72 @@ return array(
 					'title' => esc_html__('Header', 'flexity'),
 					'fields' => array(
 						array(
+							'type' => 'select',
+							'name' => 'flexity_header_type',
+							'label' => esc_html__('Header Menu Type', 'flexity'),
+							'items' => array(
+								array(
+									'value' => 'default',
+									'label' => esc_html__('Default', 'flexity'),
+								),
+								array(
+									'value' => 'burger',
+									'label' => esc_html__('Burger', 'flexity'),
+								),
+								array(
+									'value' => 'left',
+									'label' => esc_html__('Left', 'flexity'),
+								),
+							),
+							'default' => array(
+								'default'
+							),
+						),
+						array(
 							'type' => 'upload',
 							'name' => 'flexity_header_logo',
 							'label' => esc_html__('Logotype', 'flexity'),
 							'default' => get_template_directory_uri().'/img/logo.png',
+						),
+						array(
+							'type' => 'toggle',
+							'name' => 'flexity_header_search',
+							'label' => esc_html__('Show Header Search', 'flexity'),
+							'default' => '0',
+						),
+						array(
+							'type' => 'toggle',
+							'name' => 'flexity_header_cart',
+							'label' => esc_html__('Show Header Cart', 'flexity'),
+							'default' => '0',
+						),
+						array(
+							'type' => 'toggle',
+							'name' => 'flexity_header_button',
+							'label' => esc_html__('Show Header Button', 'flexity'),
+							'default' => '0',
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'flexity_header_button_text',
+							'label' => esc_html__('Header Button Text', 'flexity'),
+							'description' => '',
+							'default' => '',
+							'dependency' => array(
+								'field'    => 'flexity_header_button',
+								'function' => 'vp_dep_boolean',
+							),
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'flexity_header_button_link',
+							'label' => esc_html__('Header Button Link', 'flexity'),
+							'description' => '',
+							'default' => '',
+							'dependency' => array(
+								'field'    => 'flexity_header_button',
+								'function' => 'vp_dep_boolean',
+							),
 						),
 						array(
 							'type' => 'toggle',

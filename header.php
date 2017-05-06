@@ -24,7 +24,7 @@ if (!empty($flexity_options['flexity_header_sticky']) && $flexity_options['flexi
 body_class($sticky_header);
 ?>>
 
-<div id="page" class="site">
+<div id="page" class="site<?php echo (($flexity_options['flexity_header_type'] != '') ? ' header_type_' . $flexity_options['flexity_header_type'] : '');?>">
 
 <?php if (!empty($flexity_options['flexity_header_topbar']) && $flexity_options['flexity_header_topbar']) : ?>
 <!-- TopBar - start -->
@@ -95,17 +95,18 @@ body_class($sticky_header);
 	<?php endif; ?>
 	
 	<div class="header-info">
-
-		<!-- Search Form -->
-		<div class="header_search_wrap">
-			<a href="#" class="header_search_btn stockware_theme_icon_header_search" id="header-searchbtn"></a>
-			<div class="header_search">
-				<a href="#" class="header_search_close"></a>
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-		
-		<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+		<?php
+		if ($flexity_options['flexity_header_search']) {
+			echo '<!-- Search Form -->' . 
+			'<div class="header_search_wrap">' . 
+				'<a href="#" class="header_search_btn stockware_theme_icon_header_search" id="header-searchbtn"></a>' . 
+				'<div class="header_search">' . 
+					'<a href="#" class="header_search_close"></a>';
+					get_search_form();
+				echo '</div>' . 
+			'</div>';
+		}
+		?>
 
 		<!-- Personal Menu -->
 		<div class="header-personal">
@@ -148,6 +149,12 @@ body_class($sticky_header);
 			<?php endif; ?>
 		</div>
 
+	<?php 
+	if (
+		$flexity_options['flexity_header_cart'] && 
+		class_exists('WooCommerce')
+	) {
+	?>
 		<!-- Small Cart -->
 		<div class="header_cart_wrap">
 			<a href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" class="header-cart">
@@ -160,9 +167,9 @@ body_class($sticky_header);
 				</div>
 			</a>
 		</div>
-		
-		<?php endif; ?>
-
+	<?php
+	}
+	?>
 		<?php if (!empty($flexity_options['compare']['id'])) : ?>
 		<a href="<?php echo (!empty($flexity_options['compare']['id'])) ? get_permalink($flexity_options['compare']['id']) : ''; ?>" class="header-compare"><?php if (count($flexity_options['compare']['list'])) : ?><span><?php echo count($flexity_options['compare']['list'])?></span><?php endif; ?></a>
 		<?php endif; ?>
@@ -186,9 +193,17 @@ body_class($sticky_header);
 	?>
 	<!-- Navmenu - end -->
 	
-	<div class="header_right">
-		<a href="#" class="button">Purchase</a>
-	</div>
+	<?php 
+	if (
+		$flexity_options['flexity_header_button'] && 
+		$flexity_options['flexity_header_button_link'] != '' && 
+		$flexity_options['flexity_header_button_text'] != ''
+	) {
+		echo '<div class="header_right">' . 
+			'<a href="' . esc_url($flexity_options['flexity_header_button_link']). '" class="button">' . esc_html($flexity_options['flexity_header_button_text']). '</a>' . 
+		'</div>';
+	}
+	?>
 
 </header>
 <!-- Header - end -->
