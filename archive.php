@@ -14,17 +14,22 @@ if (!$blog_sidebar_position)
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-<!-- Breadcrumbs -->
-<div class="b-crumbs-wrap">
-	<?php if ( class_exists( 'WooCommerce' ) ) : ?>
-	<div class="cont b-crumbs">
-		<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
+<div class="title_line_wrap">
+	<div class="page_title_wrap">
+		<h1 class="entry-title page_title"><?php single_cat_title(); ?></h1>
 	</div>
-	<?php endif; ?>
+	
+	<!-- Breadcrumbs -->
+	<div class="b-crumbs-wrap">
+		<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+		<div class="b-crumbs">
+			<?php woocommerce_breadcrumb(array('wrap_before'=>'<ul class="b_crumbs_list">', 'wrap_after'=>'</ul>', 'before'=>'<li>', 'after'=>'</li>', 'delimiter'=>'')); ?>
+		</div>
+		<?php endif; ?>
+	</div>
 </div>
 
 <div class="cont maincont">
-	<h1 class="page_title"><span><?php single_cat_title(); ?></span></h1>
 
 	<!-- Blog Sections -->
 	<ul class="cont-sections">
